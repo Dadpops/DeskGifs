@@ -4,9 +4,11 @@ A tiny desktop toy: loops an animated **GIF / WebP / APNG** in a frameless,
 transparent, always-on-top window you can drag anywhere on your desktop.
 Windows only.
 
-![DeskGifs in action](docs/demo.png)
+![DeskGifs in action](docs/demo.gif)
 
 *(Sample character shown; DeskGifs ships without any animation — bring your own.)*
+
+![Control panel](docs/demo.png)
 
 - **Left-click drag** to move it
 - **Double-click** to open the control panel

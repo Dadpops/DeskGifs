@@ -7,6 +7,9 @@ settings.json
 *.apng
 robin_dance.gif
 
+# ...but do keep the repo's own demo asset
+!docs/demo.gif
+
 # PyInstaller build output
 build/
 dist/

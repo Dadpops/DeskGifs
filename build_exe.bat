@@ -6,7 +6,8 @@ echo Installing PyInstaller (if needed)...
 python -m pip install --quiet pyinstaller
 
 echo Building DeskGifs.exe ...
-python -m PyInstaller --noconfirm --noconsole --onefile --name DeskGifs desk_gif.py
+python -m PyInstaller --noconfirm --noconsole --onefile --name DeskGifs ^
+  --icon app_icon.ico --add-data "app_icon.png;." desk_gif.py
 
 echo.
 echo Done. Your app is at:  dist\DeskGifs.exe

@@ -39,7 +39,7 @@ if sys.platform == "win32":
 import numpy as np
 from PIL import Image, ImageSequence, ImageDraw
 from PyQt6.QtCore import Qt, QTimer, QSharedMemory
-from PyQt6.QtGui import QImage, QPixmap, QAction
+from PyQt6.QtGui import QImage, QPixmap, QAction, QIcon
 from PyQt6.QtWidgets import (
     QApplication, QLabel, QMenu, QWidget, QVBoxLayout, QHBoxLayout,
     QSlider, QPushButton, QFileDialog, QGroupBox, QComboBox, QCheckBox,
@@ -66,6 +66,12 @@ if getattr(sys, "frozen", False):
 else:
     HERE = os.path.dirname(os.path.abspath(__file__))
 SETTINGS_PATH = os.path.join(HERE, "settings.json")
+
+
+def resource_path(name):
+    """Path to a bundled resource, working both from source and a frozen exe."""
+    base = getattr(sys, "_MEIPASS", os.path.dirname(os.path.abspath(__file__)))
+    return os.path.join(base, name)
 
 FRAME_STYLES = ["None", "Thin line", "Thick line", "Black line",
                 "Rounded", "Rounded thick", "Double line", "Corners"]
@@ -623,6 +629,10 @@ def quit_app():
 def main():
     app = QApplication(sys.argv)
     app.setQuitOnLastWindowClosed(False)
+
+    icon_path = resource_path("app_icon.png")
+    if os.path.exists(icon_path):
+        app.setWindowIcon(QIcon(icon_path))
 
     # Single-instance lock: if a copy is already running, bail out so we don't
     # stack multiple gifs. (Kept alive on `app` so it isn't garbage collected.)
