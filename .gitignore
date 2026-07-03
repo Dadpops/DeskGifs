@@ -1,0 +1,21 @@
+# Personal settings / saved loadouts (per-user)
+settings.json
+
+# User-supplied animation assets (do not redistribute copyrighted files)
+*.gif
+*.webp
+*.apng
+robin_dance.gif
+
+# PyInstaller build output
+build/
+dist/
+*.spec
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
