@@ -4,6 +4,10 @@ A tiny desktop toy: loops an animated **GIF / WebP / APNG** in a frameless,
 transparent, always-on-top window you can drag anywhere on your desktop.
 Windows only.
 
+![DeskGifs in action](docs/demo.png)
+
+*(Sample character shown; DeskGifs ships without any animation — bring your own.)*
+
 - **Left-click drag** to move it
 - **Double-click** to open the control panel
 - **Mouse wheel** over it to resize
@@ -11,10 +15,18 @@ Windows only.
 - Stays in front of everything, including the taskbar
 - Transparent background shows through cleanly (transparent WebP looks smoothest)
 
-## Quick start
+## Download (no Python needed)
+
+Grab **`DeskGifs.exe`** from the
+[latest release](https://github.com/Dadpops/DeskGifs/releases/latest), put it
+anywhere, and double-click it. Then click **Open image…** to pick your
+animation. (Windows SmartScreen may warn about an unknown publisher on first
+run — click *More info → Run anyway*; that's normal for unsigned hobby apps.)
+
+## Quick start (from source)
 
 ```powershell
-git clone https://github.com/<your-username>/DeskGifs.git
+git clone https://github.com/Dadpops/DeskGifs.git
 cd DeskGifs
 pip install -r requirements.txt
 python desk_gif.py
